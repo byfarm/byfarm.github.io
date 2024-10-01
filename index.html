@@ -84,7 +84,11 @@
             let main = $("#main");
             main.empty();
 
-            let urlpage = $(this).prop("href");
+            var urlpage = $(this).prop("href");
+            window.location.replace(urlpage);
+            if (urlpage === "/") {
+                urlpage = "pages/main.html";
+            }
             $.ajax({
                 url: urlpage,
                 headers: {"Accept": "application/html"},
@@ -97,7 +101,6 @@
                     bind_clicks();
                 }
             })
-            window.location.replace(urlpage);
         }
         function bind_clicks() {
             $(".spa").click(get_page);
