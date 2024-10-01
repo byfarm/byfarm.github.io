@@ -82,7 +82,8 @@
             })
         }
 
-        function get_page() {
+        function get_page(event) {
+            event.preventDefault();
             let main = $("#main");
             main.empty();
 
