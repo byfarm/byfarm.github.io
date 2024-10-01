@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,31 +61,12 @@
         <!-- main body -->
         <main class="page-wrapper">
             <div class="page-body">
-                <div class="container-xl" id="main">
+                <div class="container-xl">
                 </div>
             </div>
         </main>
     </div>
     <script src="static/js/education.js"></script>
-    <script>
-        let baseUrl = "https://byfarm.github.io/";
-        let baseUrl = "";
-        let url = document.location.href;
-        if (url === baseUrl) {
-            $.ajax({
-                url: "pages/main.html",
-                headers: {"Accept": "application/html"},
-                beforeSend: function (xhr) {
-                    xhr.withCredentials = true;
-                },
-                type: "GET",
-                success: function (data) {
-                    $("#main").html(data);
-                }
-            })
-        }
-        console.log(url);
-    </script>
 </body>
 
 </html>
