@@ -81,7 +81,24 @@
                 }
             })
         }
-        console.log(url);
+    </script>
+    <script>
+        function get_page() {
+            let main = $("#main");
+            main.empty();
+            $.ajax({
+                url: $(this).prop("href"),
+                headers: {"Accept": "application/html"},
+                beforeSend: function (xhr) {
+                    xhr.withCredentials = true;
+                },
+                type: "GET",
+                success: function (data) {
+                    $("#main").html(data);
+                }
+            })
+        }
+        $(".spa").click(get_page());
     </script>
 </body>
 
