@@ -85,6 +85,7 @@
         function get_page() {
             let main = $("#main");
             main.empty();
+
             $.ajax({
                 url: $(this).prop("href"),
                 headers: {"Accept": "application/html"},
@@ -97,10 +98,8 @@
                 }
             })
         }
-        $(".spa").click(get_page());
+        $(".spa").click(get_page);
 
-    </script>
-    <script>
     </script>
 </body>
 
