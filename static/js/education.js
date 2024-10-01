@@ -1,4 +1,3 @@
-$(document).ready()
 let table = [
     ["Computer Methods for Engineers", "Roy J Johnson Memorial Scholarship"],
     ["Advanced Engineering Math", "Gonzaga Deans Scholarship"],
