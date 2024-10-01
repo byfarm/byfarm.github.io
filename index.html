@@ -66,21 +66,17 @@
         </main>
     </div>
     <script>
-        let baseUrl = "https://byfarm.github.io/";
-        let url = document.location.href;
-        if (url === baseUrl) {
-            $.ajax({
-                url: "pages/main.html",
-                headers: {"Accept": "application/html"},
-                beforeSend: function (xhr) {
-                    xhr.withCredentials = true;
-                },
-                type: "GET",
-                success: function (data) {
-                    $("#main").html(data);
-                }
-            })
-        }
+        $.ajax({
+            url: "pages/main.html",
+            headers: {"Accept": "application/html"},
+            beforeSend: function (xhr) {
+                xhr.withCredentials = true;
+            },
+            type: "GET",
+            success: function (data) {
+                $("#main").html(data);
+            }
+        })
 
         function get_page(event) {
             event.preventDefault();
