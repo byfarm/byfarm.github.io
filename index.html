@@ -65,6 +65,8 @@
             </div>
         </main>
     </div>
+
+    <script src="static/js/education.js"></script>
     <script>
         $.ajax({
             url: "pages/main.html",
@@ -76,6 +78,7 @@
             success: function (data) {
                 $("#main").html(data);
                 bind_clicks();
+                fill_table()
             }
         })
 
@@ -98,14 +101,7 @@
                 success: function (data) {
                     $("#main").html(data);
                     bind_clicks();
-
-                    const scripts = data.match(/<script[^>]*>([\s\S]*?)<\/script>/g);
-                    if (scripts) {
-                        scripts.forEach(script => {
-                            const scriptContent = script.replace(/<script[^>]*>|<\/script>/g, '');
-                            eval(scriptContent); // or create a new script element
-                        });
-                    }
+                    fill_table();
                 }
             })
         }
