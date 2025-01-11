@@ -2,10 +2,8 @@
 <html lang="en">
 
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/css/tabler.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
 </head>
 
 <body>
@@ -45,7 +43,7 @@
                     <div class="nav-item">
                         <a href="/" class="spa nav-link d-flex lh-1 text-reset p-0">
                             <span class="avatar avatar-sm" style="background-image: url(static/img/profile.jpg)"></span>
-                            <div class="d-none d-xl-block ps-2">
+                            <div class="d-none d-sm-block ps-2">
                                 <div>Byron Farmar</div>
                                 <div class="mt-1 small text-secondary">Engineer</div>
                             </div>
@@ -67,29 +65,36 @@
         </main>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@tabler/core@1.0.0-beta17/dist/js/tabler.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+
     <script>
-
-        function fill_table() {
-            let table = [
-                ["Computer Methods for Engineers", "Roy J Johnson Memorial Scholarship"],
-                ["Advanced Engineering Math", "Gonzaga Deans Scholarship"],
-                ["Controls Engineering", "Gonzaga Leaders Scholarship"],
-                ["Thermodynamics", ""],
-                ["Machine Design", ""],
-                ["Heat Transfer", ""],
-                ["Material Engineering", ""]
-            ];
-
-            var eduTable = $("#education-table");
+        function fill_table(table_id, table) {
+            var tableTag = $(table_id);
             for (let i = 0; i < table.length; i++) {
                 var tr = $("<tr>");
                 for (let j = 0; j < table[i].length; j++) {
                     var td1Tag = $("<td>").text(table[i][j]);
                     td1Tag.appendTo(tr);
                 }
-                tr.appendTo(eduTable);
+                tr.appendTo(tableTag);
             }
         }
+
+        let courseTable = [
+            ["Controls Engineering", "Computational Dynamics"],
+            ["Instrumentation Systems", "Machine Design"],
+            ["Vibration Engineering", "Thermodynamics"],
+            ["Material Engineering", "Advanced Engineering Math"],
+            ["Structural Engineering", "Statistical Physics"],
+        ];
+        courseTableId = "#education-table-courses"
+
+        let scholarTable = [
+            ["Gonzaga Leaders Scholarship", "Roy J Johnson Memorial Scholarship",  "Gonzaga Deans Scholarship"],
+        ];
+        scholarTableId = "#education-table-scholarships"
+
 
         $.ajax({
             url: "pages/main.html",
@@ -101,7 +106,8 @@
             success: function (data) {
                 $("#main").html(data);
                 bind_clicks();
-                fill_table()
+                fill_table(courseTableId, courseTable);
+                fill_table(scholarTableId, scholarTable);
             }
         })
 
@@ -124,7 +130,8 @@
                 success: function (data) {
                     $("#main").html(data);
                     bind_clicks();
-                    fill_table();
+                    fill_table(courseTableId, courseTable);
+                    fill_table(scholarTableId, scholarTable);
                 }
             })
         }
