@@ -92,7 +92,7 @@
         courseTableId = "#education-table-courses"
 
         let scholarTable = [
-            ["Gonzaga Leaders Scholarship", "Roy J Johnson Memorial Scholarship",  "Gonzaga Deans Scholarship"],
+            ["Gonzaga Leaders Scholarship", "Roy J Johnson Memorial Scholarship", "Gonzaga Deans Scholarship"],
         ];
         scholarTableId = "#education-table-scholarships"
 
@@ -121,6 +121,11 @@
             if (urlpage === "/") {
                 urlpage = "pages/main.html";
             }
+
+            // get the callback function and run it
+            var callbackFunctionName = $(this).data("callback")
+            var fillInData = $(this).data()
+
             $.ajax({
                 url: urlpage,
                 headers: {"Accept": "application/html"},
@@ -134,13 +139,48 @@
                     fill_table(courseTableId, courseTable);
                     fill_table(scholarTableId, scholarTable);
                     window.scrollTo(0, 0);
+
+                    // if a callback function was passed in, then call it with the arguments
+                    if (callbackFunctionName && typeof window[callbackFunctionName] === "function") {
+                        window[callbackFunctionName](fillInData); // Spread the arguments into the function call
+                    }
                 }
             })
         }
         function bind_clicks() {
-            $(".spa").click(get_page);
+            $(".spa").click(get_page)
         }
         bind_clicks();
+
+        function fillInProjectDetailPage(data) {
+            // replace all the text areas
+            $("#page-title").text(data.pageTitle)
+            $("#source-code-link").attr("href", data.sourceCodeLink)
+            $("#summary-body").text(data.summaryBody)
+            $("#improvements-body").text(data.improvementBody)
+
+            // add onto the skills list
+            let skillsList = $("#skills-list")
+            data.skills.forEach(function (skill) {
+                var listEl = $('<li class="list-group-item"></li>')
+                listEl.text(skill)
+                skillsList.append(listEl)
+            }
+            )
+
+            // check for photos
+            if (data.photos === void(0)) {
+                return
+            }
+
+            // add onto the photos list
+            let photosList = $("#photos")
+            data.photos.forEach(function (photo) {
+                var photoTemplate = $("#card-template").html()
+                var photohtml = photoTemplate.replace("{{title}}", photo.title).replace("{{imageSrc}}", photo.imgSrc)
+                photosList.append(photohtml);
+            })
+        }
 
     </script>
 </body>
