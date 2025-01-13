@@ -103,14 +103,9 @@
 <div class="row row-deck row-cards">
     <div class="col-sm-3">
         <a class="card spa" href="pages/detail_page_template.html" data-callback="fillInProjectDetailPage"
-            data-page-title="Roll Grind Optimization"
-            data-source-code-link="https://github.com/byfarm/ENG25-58"
-            data-summary-body="This project was my Senior Design Project for Gonzaga University.
-                    Kaiser Aluminum is trying to better predict when their aluminum rolls are going to fail based on
-                    data collected from their PLC's. My group's solution was to create a MySQL database to efficiently
-                    store the data we needed, and created a web frontend to display our calculations."
-            data-improvement-body="This project is still in progress. Once the Senior Design Project
-                        is finished, this section will be updated."
+            data-page-title="Roll Grind Optimization" data-source-code-link="https://github.com/byfarm/ENG25-58"
+            data-summary-body="This project was my Senior Design Project for Gonzaga University. Kaiser Aluminum is trying to better predict when their aluminum rolls are going to fail based on data collected from their PLC's. My group's solution was to create a MySQL database to efficiently store the data we needed, and created a web frontend to display our calculations."
+            data-improvement-body="This project is still in progress. Once the Senior Design Project is finished, this section will be updated."
             data-skills='["MySQL", "Web Development", "Python Flask", "Machine Design", "Data Analysis"]'
             data-photos='[{"title": "App Frontend", "imgSrc": "static/img/rollgrind.png"}, {"title": "Histogram of Forces", "imgSrc": "static/img/rollgrind_histogram.png"}]'>
             <!-- Photo -->
@@ -127,7 +122,12 @@
         </a>
     </div>
     <div class="col-sm-3">
-        <a class="card spa" href="/pages/wherethesnow.html">
+        <a class="card spa" href="pages/detail_page_template.html" data-callback="fillInProjectDetailPage"
+            data-page-title="Where The Snow" data-source-code-link="https://github.com/byfarm/wherethesnow"
+            data-summary-body="This project was a personal projet I undertook to better understand how to build a web application that is available on the world wide web. The application takes in the user's location, and then return ski areas that are close to the user. It also returns the last week's snowfall totals to the user as well, so that the user can decide which resort to ski at based on recent snowfall."
+            data-improvement-body="There could be a resort detail page, where users could see booking options for hotels, the forcast, or anything else that help them make the best decision of which ski resort to go to."
+            data-skills='["AWS", "Docker", "Python Django", "PostgreSQL"]'
+            data-photos='[{"title": "App Front Page", "imgSrc": "static/img/wherethesnow.jpg"}]'>
             <!-- Photo -->
             <div class="card-body">
                 <h3 class="card-title fw-semibold">WhereTheSnow.com<p class="fw-lighter fst-italic">Docker,
@@ -142,7 +142,12 @@
         </a>
     </div>
     <div class="col-sm-3">
-        <a class="card spa" href="pages/chatserver.html">
+        <a class="card spa" href="pages/detail_page_template.html" data-callback="fillInProjectDetailPage"
+            data-page-title="Rust Chat Server" data-source-code-link="https://github.com/byfarm/chatserver-public"
+            data-summary-body="This project was for the 2024 Gonzaga Hackathon. My college housemates and I created a chat server and a client CLI that we run on a Raspberry Pi at our house. We wrote it in rust to help us to learn the language, and also to give us low latency when communicating with each other. We used SQLite for our storage system, and users can automatically be logged in based on their IP address."
+            data-improvement-body="We have attempted to change the server so that it runs on an ESP32, but it is proving difficult. We got the communication layer working, however the storage layer is hard to figure out since there is no online documentation for rust coupled with the ESP32's file system."
+            data-skills='["Rust", "Networking", "SQLite", "Embedded Development", "Git"]'
+            data-photos='[{"title": "App Front Page", "imgSrc": "static/img/chatserver_cli.svg"}, {"title": "Communication Diagram", "imgSrc": "static/img/chatserver_bfd.svg"}]'>
             <!-- Photo -->
             <div class="card-body">
                 <h3 class="card-title fw-semibold">Rust Chat Server<p class="fw-lighter fst-italic">Rust, Networking,
@@ -156,7 +161,12 @@
         </a>
     </div>
     <div class="col-sm-3">
-        <a class="card spa" href="/pages/chessgame.html">
+        <a class="card spa" href="pages/detail_page_template.html" data-callback="fillInProjectDetailPage"
+            data-page-title="Alpha Zero" data-source-code-link="https://github.com/byfarm/chess"
+            data-summary-body="I attempted to recreate the Alpha Zero algorithm in python. This first consisted of creating a chess game with rules that two people could play. This part was completed using numpy. I then wanted to expand upon the two player game to create a bot to play against. I chose to recreate the Alpha Zero algorithm. Needless to say, it did not end up being successfull. It was one of the first software projects I undertook though and I had fun and learned a lot about how Neural Networks and chess bots worked."
+            data-improvement-body="The program seemed at times to get stuck playing the same moves all the time when training itself. This implied that it was reaching a local minima with its loss function. A way to improve this would be to play around with the NN's parameters to see if it is able to break out of the minima. I also believe that the network I was using was much too small (100's of nodes). An expantion to many more nodes would help."
+            data-skills='["Machine Learning", "Python Numpy", "Algorithims", "TensorFlow"]'
+            data-photos='[{"title": "Screen Display of Game", "imgSrc": "static/img/chessgame.jpg"}]'>
             <!-- Photo -->
             <div class="card-body">
                 <h3 class="card-title fw-semibold">Alpha Zero<p class="fw-lighter fst-italic">Python, TensorFlow,
@@ -171,7 +181,12 @@
         </a>
     </div>
     <div class="col-sm-3">
-        <a class="card spa" href="pages/truss.html">
+        <a class="card spa" href="pages/detail_page_template.html" data-callback="fillInProjectDetailPage"
+            data-page-title="Truss Optimizer" data-source-code-link="https://github.com/byfarm/optimization"
+            data-summary-body="This was a research project at Gonzaga University for Dr. Ganzaleri. The goal was to create a MATLAB program that optimizes structural truss desings. This was done by using linear algebra to create the truss stiffness matrix from user input and then calculating recation forces in each rod. Different approaches were used for optimization including iteratively changing rod sizes until the truss met design specifications."
+            data-improvement-body="Making a better input interface would go a long way to improving this program. It uses a csv input method with is nice for saving work, but to generate the csv file is tedious and not intuitive."
+            data-skills='["Optimization Algorithms", "MATLAB", "Structural Engineering"]'
+            data-photos='[{"title": "2D Truss", "imgSrc": "static/img/truss.svg"}, {"title": "3D Truss", "imgSrc": "static/img/truss_3d.svg"}]'>
             <!-- Photo -->
             <div class="card-body">
                 <h3 class="card-title fw-semibold">Truss Optimizer<p class="fw-lighter fst-italic">MATLAB,
@@ -186,7 +201,12 @@
     </div>
 
     <div class="col-sm-3">
-        <a class="card spa" href="pages/beam.html">
+        <a class="card spa" href="pages/detail_page_template.html" data-callback="fillInProjectDetailPage"
+            data-page-title="Beam Analyzer" data-source-code-link="https://github.com/byfarm/beams"
+            data-summary-body="This program parsed and decoded a text file generated by user input to understand the loading conditions on a beam. It then interpreted these loading conditions and calculated the shear and bending moment at each point along the beam. Data analysis was then performed on the results to find the maximum shear and bending moment."
+            data-improvement-body="Having the program calculate the deflection across the beam would be a great, however then information about the dimentions and material of the properties would have to be known. A custom numerical integrator would also need to be created to be compatible with the input language."
+            data-skills='["C", "Python", "Numpy", "MatPlotLib", "Statics", "Numerical Methods"]'
+            data-photos='[{"title": "Generated Shear and Moment Diagrams", "imgSrc": "static/img/beam.svg"}, {"title": "Calculated Reaction Forces and Max Shear and Stress Locations", "imgSrc": "static/img/beam_results.svg"}]'>
             <!-- Photo -->
             <div class="card-body">
                 <h3 class="card-title fw-semibold">Beam Analyzer<p class="fw-lighter fst-italic">C, Python,
@@ -200,7 +220,12 @@
         </a>
     </div>
     <div class="col-sm-3">
-        <a class="card spa" href="pages/thissite.html">
+        <a class="card spa" href="pages/detail_page_template.html" data-callback="fillInProjectDetailPage"
+            data-page-title="Arduino Escape Room" data-source-code-link="https://github.com/byfarm/Arduino_Robot"
+            data-summary-body="The final project for my Freshman Seminar class at Gonzaga University, this project's goal was to program a robot to autonomously escape from a maze. The robot had a swiveling head that had an ultrasonic and light sensor attached to it, and it used two servo motors attaches to some wheels that helped it move around. The brains of the was an Arduino that took in data from the sensors and commanded the wheels how to move. The project was completed successfully and the robot escaped the maze."
+            data-improvement-body="Having the Arduino draw power from the batteries on board instead of from the computer attached to it would have made the project go a lot smoother, as our group would have to move around with the arduino as it completed the challenge, making sure not to tug on it with the cord attached to it."
+            data-skills='["Embedded Development", "MATLAB", "Sensors"]'
+            data-photos='[{"title": "Arduino Robot", "imgSrc": "static/img/arduino.svg"}]'>
             <!-- Photo -->
             <div class="card-body">
                 <h3 class="card-title fw-semibold">Arduino Escape Room Challenge<p class="fw-lighter fst-italic">MATLAB,
@@ -216,8 +241,7 @@
     </div>
     <div class="col-sm-3">
         <a class="card spa" href="pages/detail_page_template.html" data-callback="fillInProjectDetailPage"
-            data-page-title="This Site"
-            data-source-code-link="https://github.com/byfarm/byfarm.github.io"
+            data-page-title="This Site" data-source-code-link="https://github.com/byfarm/byfarm.github.io"
             data-summary-body="This website is a cool single page application"
             data-improvement-body="This website is still being built"
             data-skills='["HTML/CSS", "JavaScript", "jQuery", "Application Development"]'>
