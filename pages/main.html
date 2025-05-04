@@ -75,7 +75,7 @@
             <!-- Photo -->
             <div class="card-body">
                 <h3 class="card-title">Junior Software Engineer &ensp;&ensp;<p class="fw-lighter fst-italic">Titan
-                    Engineering</p>
+                        Engineering</p>
                 </h3>
                 <p class="text-secondary fw-bold">Denver, CO <span class="text-secondary fw-normal"> | August 2023 -
                         March 2025</span></p>
@@ -119,6 +119,25 @@
     </div>
     <div class="col-sm-3">
         <a class="card spa" href="pages/detail_page_template.html" data-callback="fillInProjectDetailPage"
+            data-page-title="Autoswap.nvim" data-source-code-link="https://github.com/byfarm/autoswap.nvim"
+            data-summary-body="Created a NeoVim plugin to ease the use of writing unicode characters.
+
+Instead of having to search up unicode symbols or having to memorize glyph codes, if you want to write β, type \beta. The plugin will automatically detect the word and replace \beta with β. If you would like capitol beta, Β, type \Beta."
+            data-improvement-body="Activity taking improvment requests."
+            data-skills='["Lua", "Open Source Projects", "Plugin Development"]' data-photos='[]'>
+            <!-- Photo -->
+            <div class="card-body">
+                <h3 class="card-title fw-semibold">Autoswap.nvim<p class="fw-lighter fst-italic">Open Source Projects,
+                        Plugin Development, Lua
+                    <p>
+                </h3>
+                <p class="text-secondary">Unicode symbol helper for NeoVim.</p>
+            </div>
+            <div class="img-responsive img-responsive-21x9 card-img-top"></div>
+        </a>
+    </div>
+    <div class="col-sm-3">
+        <a class="card spa" href="pages/detail_page_template.html" data-callback="fillInProjectDetailPage"
             data-page-title="Where The Snow" data-source-code-link="https://github.com/byfarm/wherethesnow"
             data-summary-body="This project was a personal projet I undertook to better understand how to build a web application that is available on the world wide web. The application takes in the user's location, and then return ski areas that are close to the user. It also returns the last week's snowfall totals to the user as well, so that the user can decide which resort to ski at based on recent snowfall."
             data-improvement-body="There could be a resort detail page, where users could see booking options for hotels, the forcast, or anything else that help them make the best decision of which ski resort to go to."
@@ -139,25 +158,6 @@
     </div>
     <div class="col-sm-3">
         <a class="card spa" href="pages/detail_page_template.html" data-callback="fillInProjectDetailPage"
-            data-page-title="Rust Chat Server" data-source-code-link="https://github.com/byfarm/chatserver-public"
-            data-summary-body="This project was for the 2024 Gonzaga Hackathon. My college housemates and I created a chat server and a client CLI that we run on a Raspberry Pi at our house. We wrote it in rust to help us to learn the language, and also to give us low latency when communicating with each other. We used SQLite for our storage system, and users can automatically be logged in based on their IP address."
-            data-improvement-body="We have attempted to change the server so that it runs on an ESP32, but it is proving difficult. We got the communication layer working, however the storage layer is hard to figure out since there is no online documentation for rust coupled with the ESP32's file system."
-            data-skills='["Rust", "Networking", "SQLite", "Embedded Development", "Git"]'
-            data-photos='[{"title": "App Front Page", "imgSrc": "static/img/chatserver_cli.svg"}, {"title": "Communication Diagram", "imgSrc": "static/img/chatserver_bfd.svg"}]'>
-            <!-- Photo -->
-            <div class="card-body">
-                <h3 class="card-title fw-semibold">Rust Chat Server<p class="fw-lighter fst-italic">Rust, Networking,
-                        SQLite</p>
-                </h3>
-                <p class="text-secondary">Created a CLI for the people living in a college household to communicate with
-                    each other.</p>
-            </div>
-            <div class="img-responsive img-responsive-21x9 card-img-top"
-                style="background-image: url(static/img/chatserver_cli.svg)"></div>
-        </a>
-    </div>
-    <div class="col-sm-3">
-        <a class="card spa" href="pages/detail_page_template.html" data-callback="fillInProjectDetailPage"
             data-page-title="Alpha Zero" data-source-code-link="https://github.com/byfarm/chess"
             data-summary-body="I attempted to recreate the Alpha Zero algorithm in Python. This first consisted of creating a chess game with rules that two people could play. This part was completed using NumPy. I then wanted to expand upon the two player game to create a bot to play against. This consited of creating two neural networks, a policy and value one, coupled with Monte Carlo Tree search to create evaluations of postions and choose moves. Needless to say, it did not end up being a good bot to play against. The largest physical barrier that I came up against was compute power, (which I knew would be an issue going into the project but did it anyways) and also my general naivete towards programming. It was one of the first software projects I undertook and I had a lot of fun not only learning how programming worked, but also about how Neural Networks and chess bots worked."
             data-improvement-body="The program seemed at times to get stuck playing the same moves all the time when training itself. This implied that it was reaching a local minima with its loss function. A way to improve this would be to play around with the NN's parameters to see if it is able to break out of the minima. I also believe that the network I was using was much too small (100's of nodes). An expantion to many more nodes would help."
@@ -174,6 +174,25 @@
             </div>
             <div class="img-responsive img-responsive-21x9 card-img-top"
                 style="background-image: url(static/img/chessgame.jpg)"></div>
+        </a>
+    </div>
+    <div class="col-sm-3">
+        <a class="card spa" href="pages/detail_page_template.html" data-callback="fillInProjectDetailPage"
+            data-page-title="Rust Chat Server" data-source-code-link="https://github.com/byfarm/chatserver-public"
+            data-summary-body="This project was for the 2024 Gonzaga Hackathon. My college housemates and I created a chat server and a client CLI that we run on a Raspberry Pi at our house. We wrote it in rust to help us to learn the language, and also to give us low latency when communicating with each other. We used SQLite for our storage system, and users can automatically be logged in based on their IP address."
+            data-improvement-body="We have attempted to change the server so that it runs on an ESP32, but it is proving difficult. We got the communication layer working, however the storage layer is hard to figure out since there is no online documentation for rust coupled with the ESP32's file system."
+            data-skills='["Rust", "Networking", "SQLite", "Embedded Development", "Git"]'
+            data-photos='[{"title": "App Front Page", "imgSrc": "static/img/chatserver_cli.svg"}, {"title": "Communication Diagram", "imgSrc": "static/img/chatserver_bfd.svg"}]'>
+            <!-- Photo -->
+            <div class="card-body">
+                <h3 class="card-title fw-semibold">Rust Chat Server<p class="fw-lighter fst-italic">Rust, Networking,
+                        SQLite</p>
+                </h3>
+                <p class="text-secondary">Created a CLI for the people living in a college household to communicate with
+                    each other.</p>
+            </div>
+            <div class="img-responsive img-responsive-21x9 card-img-top"
+                style="background-image: url(static/img/chatserver_cli.svg)"></div>
         </a>
     </div>
     <div class="col-sm-3">
